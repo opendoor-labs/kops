@@ -199,3 +199,5 @@ spec:
             path: /lib/modules
   updateStrategy:
     type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1

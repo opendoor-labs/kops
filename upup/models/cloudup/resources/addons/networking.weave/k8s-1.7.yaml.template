@@ -215,3 +215,5 @@ spec:
             path: /run/xtables.lock
   updateStrategy:
     type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
