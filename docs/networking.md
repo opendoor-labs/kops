@@ -109,6 +109,17 @@ spec:
       mtu: 8912
 ```
 
+### Configuring Weave Connection Limit
+
+The Weave connection limit is configurable by editing the cluster and setting `connLimit` option in the weave configuration.
+See https://github.com/weaveworks/weave/issues/426 for more discussion.
+
+```
+spec:
+  networking:
+    weave:
+      mtu: 8912
+```
 
 ### Calico Example for CNI and Network Policy
 
