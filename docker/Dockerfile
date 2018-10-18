@@ -40,6 +40,8 @@ RUN set -ex && \
         \
         go get -d k8s.io/kops && \
         cd ${GOPATH}/src/k8s.io/kops/ && \
+        git remote add opendoor https://github.com/opendoor-labs/kops && \
+        git fetch opendoor && \
         git checkout ${KOPS_GITISH} && \
         make SHASUMCMD=0 && \
         mv ${GOPATH}/bin/kops /usr/bin/. && \
