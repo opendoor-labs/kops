@@ -17,6 +17,7 @@ limitations under the License.
 package v1alpha1
 
 import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+import corev1 "k8s.io/api/core/v1"
 
 // KubeletConfigSpec defines the kubelet configuration
 type KubeletConfigSpec struct {
@@ -352,6 +353,9 @@ type KubeAPIServerConfig struct {
 	// MinRequestTimeout configures the minimum number of seconds a handler must keep a request open before timing it out.
 	// Currently only honored by the watch request handler
 	MinRequestTimeout *int32 `json:"minRequestTimeout,omitempty" flag:"min-request-timeout"`
+
+	// Pod resources for apiserver
+	Resources *corev1.ResourceRequirements `json:"resources,omitempty"`
 }
 
 // KubeControllerManagerConfig is the configuration for the controller
