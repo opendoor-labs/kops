@@ -2214,7 +2214,6 @@ func autoConvert_v1alpha1_KubeAPIServerConfig_To_kops_KubeAPIServerConfig(in *Ku
 	out.MaxRequestsInflight = in.MaxRequestsInflight
 	out.EtcdQuorumRead = in.EtcdQuorumRead
 	out.MinRequestTimeout = in.MinRequestTimeout
-	out.Resources = in.Resources
 	return nil
 }
 
@@ -2286,7 +2285,6 @@ func autoConvert_kops_KubeAPIServerConfig_To_v1alpha1_KubeAPIServerConfig(in *ko
 	out.MaxRequestsInflight = in.MaxRequestsInflight
 	out.EtcdQuorumRead = in.EtcdQuorumRead
 	out.MinRequestTimeout = in.MinRequestTimeout
-	out.Resources = in.Resources
 	return nil
 }
 

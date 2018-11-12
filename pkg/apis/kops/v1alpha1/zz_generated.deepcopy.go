@@ -21,7 +21,6 @@ limitations under the License.
 package v1alpha1
 
 import (
-	core_v1 "k8s.io/api/core/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 )
@@ -2153,15 +2152,6 @@ func (in *KubeAPIServerConfig) DeepCopyInto(out *KubeAPIServerConfig) {
 		} else {
 			*out = new(int32)
 			**out = **in
-		}
-	}
-	if in.Resources != nil {
-		in, out := &in.Resources, &out.Resources
-		if *in == nil {
-			*out = nil
-		} else {
-			*out = new(core_v1.ResourceRequirements)
-			(*in).DeepCopyInto(*out)
 		}
 	}
 	return
